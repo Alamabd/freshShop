@@ -38,8 +38,6 @@ function ProductList() {
                 {
                     product ? 
                     product.map((val) => {
-                        console.log(val.img);
-                        
                         return(
                             <div key={val._id} className="p-4 flex gap-4 w-max rounded-xl shadow">
                                 <img src={val.img} alt="apple" className="min-w-32 min-h-24 max-w-32 max-h-24 rounded-xl" />

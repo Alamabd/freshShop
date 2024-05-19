@@ -1,5 +1,3 @@
-import Nav from "./Nav"
-
 function Header() {
   return (
     <header className="mt-4 mx-12">
@@ -17,7 +15,6 @@ function Header() {
             </li>
         </ul>
         </div>
-        <Nav />
     </header>
   )
 }
