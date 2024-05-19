@@ -3,13 +3,13 @@ const productModel = require("../models/productModel")
 
 const productSchema = Joi.object({
     name: Joi.string().required(),
-    price: Joi.number().required(),
+    price: Joi.string().required(),
     img: Joi.string().required()
 })
 
 const getProduct = async(req, res) => {
     try {
-        const result = await productModel.find().limit(10)
+        const result = await productModel.find()
         console.log(result);
         res.json({
             message: "Find succes",
