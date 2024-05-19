@@ -1,6 +1,6 @@
 function Header() {
   return (
-    <header className="mt-4 mx-12">
+    <header className="mt-4">
         <div className="flex gap-4 text-xs justify-end">
         <ul>
             <li>My Account</li>

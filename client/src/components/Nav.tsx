@@ -6,7 +6,7 @@ function Nav() {
     const [ openSearch, setOpenSearch ] = useState<boolean>(false)
 
     return (
-        <nav className="mx-12 relative flex items-center justify-between">
+        <nav className="relative flex items-center justify-between">
             <Search open={openSearch} setOpen={(open) => setOpenSearch(open)} />
             <div>
                 <a href="#">

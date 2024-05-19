@@ -5,14 +5,12 @@ import ProductList from "../components/ProductList"
 
 function Product() {
   return (
-    <div>
+    <div className="mx-12 max-sm:mx-4">
       <Header />
       <Nav />
-      <main className="mx-12 mt-8">
+      <main className="mt-8 mx-4">
         <Carausel />
-        <div className="w-2/3">
-          <ProductList />
-        </div>
+        <ProductList />
       </main>
     </div>
   )
