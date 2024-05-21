@@ -1,13 +1,18 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import './index.css'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
+import './index.css'
 import Product from './pages/Product.tsx'
+import Cart from './pages/Cart.tsx'
 
 const router = createBrowserRouter([
   {
     path: '/',
     element: <Product />
+  },
+  {
+    path: '/cart',
+    element: <Cart />
   }
 ])
 

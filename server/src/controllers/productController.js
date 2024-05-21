@@ -10,7 +10,6 @@ const productSchema = Joi.object({
 const getProduct = async(req, res) => {
     try {
         const result = await productModel.find()
-        console.log(result);
         res.json({
             message: "Find succes",
             data: result
