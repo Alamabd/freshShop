@@ -4,7 +4,7 @@ import "slick-carousel/slick/slick-theme.css"
 
 function Carausel() {
     return(
-        <div className='sm:w-1/2 sm:mx-auto'>
+        <div className="mt-12">
             <Slider {...{
                 dots: true,
                 infinite: true,

@@ -21,16 +21,16 @@ function CardDetails() {
     return (
         <>
             { cart.length !== 0 && 
-            <div className="p-8 shadow rounded border max-sm:p-4">
+            <div className="p-8 shadow rounded border max-md:p-4">
                 <h2 className="font-semibold">Card Details</h2>
-                <table className="mt-4 table-auto">
+                <table className="mt-4 table-auto max-sm:w-full">
                     <tbody>
                         {
                             cart.map(val => {
                                 return (
                                     <tr key={val._id}>
                                         <td>{val.name}</td>
-                                        <td className="px-12 text-nowrap max-sm:px-4">{val.amount} pcs</td>
+                                        <td className="px-12 text-nowrap max-lg:px-4">{val.amount} pcs</td>
                                         <td className="text-end">{totalPriceProduct(val.price, val.amount)}</td>
                                     </tr>
                                 )

@@ -39,7 +39,7 @@ function CartProduct() {
                             cart.map((val, idx) => {
                                 return (
                                     <tr className="text-center" key={val._id}>
-                                        <td className="pr-12 py-2 max-sm:pr-4 text-left">
+                                        <td className="pr-12 py-2 max-lg:pr-4 text-left">
                                             <div className="flex relative">
                                                 <img src={val.img} alt="apple" className="w-24 h-24 object-cover rounded-2xl" />
                                                 <span className="absolute left-4 top-4 text-white">
@@ -47,7 +47,7 @@ function CartProduct() {
                                                 </span>
                                             </div>
                                         </td>
-                                        <td className="pr-12 py-2 max-sm:pr-4">
+                                        <td className="pr-12 py-2 max-lg:pr-4">
                                             <div className="flex items-center gap-4">
                                                 <button onClick={() => changeAmount({idx, change: 'decrement'})}>
                                                     <svg className="w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M19 11H5V13H19V11Z"></path></svg>
@@ -58,7 +58,7 @@ function CartProduct() {
                                                 </button>
                                             </div>
                                         </td>
-                                        <td className="pr-12 py-2 max-sm:pr-4">{val.price}</td>
+                                        <td className="pr-12 py-2 max-lg:pr-4 text-left">{val.price}</td>
                                     </tr>
                                 )
                             })
