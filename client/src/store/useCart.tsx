@@ -12,6 +12,7 @@ export interface cartItem {
 interface cartState {
   cart: cartItem[]
   addCart: (data: cartItem) => void
+  rmCart: (idx: number) => void
   updateAmount: (number: number, idx: number) => void
 }
 
@@ -21,6 +22,13 @@ const useCart = create(
       cart: [],
       addCart: (data) => {
         set((state) => ({cart: [...state.cart, data]}))
+      },
+      rmCart: (idx) => {
+        set((state) => {
+          const newCart = [...state.cart]
+          newCart.splice(idx, 1)
+          return {cart: newCart}
+        })
       },
       updateAmount: (number, idx) => {
         set((state) => {
