@@ -10,7 +10,7 @@ function Cart() {
       <Nav />
       <main>
         <h1 className="mt-8 text-2xl font-semibold">Cart Shopping</h1>
-        <div className="flex justify-between max-md:flex-col">
+        <div className="flex gap-4 justify-between max-md:flex-col">
           <CartProduct />
           <CardDetails />
         </div>

@@ -15,7 +15,7 @@ function CardDetails() {
     }
 
     useEffect(() => {
-        cart.length !== 0 && setFees(2000)
+        cart.length !== 0 && setFees(2000 * cart.length)
     })
     
     return (
@@ -30,7 +30,7 @@ function CardDetails() {
                                 return (
                                     <tr key={val._id}>
                                         <td>{val.name}</td>
-                                        <td className="px-12 text-nowrap">{val.amount} pcs</td>
+                                        <td className="px-12 text-nowrap max-sm:px-4">{val.amount} pcs</td>
                                         <td className="text-end">{totalPriceProduct(val.price, val.amount)}</td>
                                     </tr>
                                 )
