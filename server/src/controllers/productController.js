@@ -3,8 +3,9 @@ const productModel = require("../models/productModel")
 
 const productSchema = Joi.object({
     name: Joi.string().required(),
-    price: Joi.string().required(),
-    img: Joi.string().required()
+    price: Joi.number().required(),
+    img: Joi.string().required(),
+    rating: Joi.number().required()
 })
 
 const getProduct = async(req, res) => {
