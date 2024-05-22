@@ -30,7 +30,7 @@ function Toast({positionX, positionY, status, open, timeout, onClose, message}: 
     }, [open])
 
     return (
-        <div className={`${!open && 'hidden'} m-12 py-2 fixed flex items-center bg-slate-100 ${status === 'succes' ? 'border-green-600' : status === 'warning' ? 'border-red-600' : 'border-yellow-600'} border-l-8 rounded overflow-hidden shadow ${posX} ${posY}`}>
+        <div className={`${!open && 'hidden'} m-12 py-2 fixed flex z-20 items-center bg-slate-100 ${status === 'succes' ? 'border-green-600' : status === 'warning' ? 'border-red-600' : 'border-yellow-600'} border-l-8 rounded overflow-hidden shadow ${posX} ${posY}`}>
             <div className={`ml-4 w-8 h-8 ${status === 'succes' ? 'bg-green-600' : status === 'warning' ? 'bg-red-600' : 'bg-yellow-600'} rounded-full flex justify-center items-center`}>
                 {
                     status === 'succes' ?
