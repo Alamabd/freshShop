@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
 import useCart from "../store/useCart"
+import FormatIdr from "../utils/FormatIdr"
 
 function CardDetails() {
     const { cart } = useCart()
@@ -8,14 +9,9 @@ function CardDetails() {
 
     let totalPrice = 0 - fees
 
-    function totalPriceProduct(price: string, amount: number) {
-        const total = parseInt(price.replace(/\D/g, '')) * amount
-        totalPrice += total
-        return total.toLocaleString('id-ID', {style: 'currency', currency: 'IDR'})
-    }
-
     useEffect(() => {
         cart.length !== 0 && setFees(2000 * cart.length)
+        console.log(totalPrice);        
     })
     
     return (
@@ -27,11 +23,12 @@ function CardDetails() {
                     <tbody>
                         {
                             cart.map(val => {
+                                totalPrice += parseInt(val.price)
                                 return (
                                     <tr key={val._id}>
                                         <td>{val.name}</td>
                                         <td className="px-12 text-nowrap max-lg:px-4">{val.amount} pcs</td>
-                                        <td className="text-end">{totalPriceProduct(val.price, val.amount)}</td>
+                                        <td className="text-end">{FormatIdr(parseInt(val.price) * val.amount)}</td>
                                     </tr>
                                 )
                             })
@@ -39,12 +36,12 @@ function CardDetails() {
                         <tr className="border-b">
                             <td className="pt-4 pb-2 text-nowrap">handling fees</td>
                             <td className="pt-4 pb-2"></td>
-                            <td className="pt-4 pb-2 text-end">{fees.toLocaleString('id-ID', {style: 'currency', currency: 'IDR'})}</td>
+                            <td className="pt-4 pb-2 text-end">{FormatIdr(fees)}</td>
                         </tr>
                         <tr className="border-b">
                             <td className="py-2 text-nowrap">Total Price</td>
                             <td className="py-2"></td>
-                            <td className="py-2 text-end">{totalPrice.toLocaleString('id-ID', {style: 'currency', currency: 'IDR'})}</td>
+                            <td className="py-2 text-end">{FormatIdr(totalPrice)}</td>
                         </tr>
                     </tbody>
                 </table>
