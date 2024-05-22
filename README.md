@@ -6,8 +6,8 @@
   ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
   ![React](https://img.shields.io/badge/zustand-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
   ![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)
-  
-  <p>freshshop aplikasi belanja online yang menyediakan buah segar. Aplikasi ini dibuat untuk penjualan buah segar langsung dari petani atau distributor yang digunakan secara online yang dapat dibeli langsung dari rumah.</p>
+
+  <p>freshshop online shopping application that provides fresh fruit. This application was created for selling fresh fruit directly from farmers or distributors which can be used online and can be purchased directly from home</p>
   
   ![oke (1)](https://github.com/Alamabd/freshShop/assets/115331322/4e53bbc7-4a55-4b97-b30b-b3ab4f8e510a)
 </div>
