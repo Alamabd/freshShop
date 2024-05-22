@@ -10,7 +10,8 @@ function Carausel() {
                 infinite: true,
                 speed: 500,
                 slidesToShow: 1,
-                slidesToScroll: 1
+                slidesToScroll: 1,
+                autoplay: true
             }}>
                 <div>
                     <img src="./banner1.jpg" alt="banner1" />
